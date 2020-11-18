@@ -3,38 +3,30 @@
 
 using namespace std;
 
-int maxSubArraySum(int a[], int size)
-{
-    int max_so_far = INT_MIN, max_ending_here = 0;
-
-    for (int i = 0; i < size; i++)
-    {
-        max_ending_here = max_ending_here + a[i];
-        if (max_so_far < max_ending_here)
-            {
-                max_so_far = max_ending_here;
-            }
-
-        if (max_ending_here < 0)
-            {
-                cout<<max_ending_here<<"\n";
-                max_ending_here = 0;
-            }
-    }
-    return max_so_far;
-}
-
 
 int main()
 {
-    int n,i;
-     cin>>n;
-    int a[n];
+    long long int ele,item,d,n,flag=0,i,s=-1,ans1=0,f=-1,j,k,m,a,b,x,y,cnt1=0,ans3=0,ans=0,max1=0,cnt=0,temp;
+    cin>>n;
+    int arr[n];
 
     for(i=0;i<n;++i)
-        cin>>a[i];
+        cin>>arr[i];
 
-    int max_sum = maxSubArraySum(a, n);
+    long long int end_sum=0,max_sum=INT_MIN;
+
+    for(i=0;i<n;++i)
+    {
+        end_sum+=arr[i];
+
+        if(max_sum<end_sum)
+            max_sum=end_sum;
+
+        if(end_sum<0)
+            end_sum=0;
+    }
+
     cout<<max_sum;
+
     return 0;
 }
