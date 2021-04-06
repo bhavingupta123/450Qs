@@ -31,4 +31,4 @@ public:
         return c.substr( 0 , ans);
         
     }
-};
+};a
