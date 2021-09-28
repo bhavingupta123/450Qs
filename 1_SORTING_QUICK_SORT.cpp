@@ -1,5 +1,6 @@
 // 1_SORTING_QUICK_SORT.cpp
 // https://www.interviewbit.com/tutorial/quicksort-algorithm/
+// USES PIVOT ELEMENT LOGIC
 
 #include<bits/stdc++.h>
 using namespace std;
